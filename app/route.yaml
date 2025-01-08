@@ -6,7 +6,10 @@ metadata:
   name: spring-petclinic
 spec:
   port:
-    targetPort: 8080-tcp
+    targetPort: https
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: reencrypt
   to:
     kind: Service
     name: spring-petclinic
