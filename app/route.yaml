@@ -8,8 +8,8 @@ spec:
   port:
     targetPort: 8443
   tls:
-    insecureEdgeTerminationPolicy: Redirect
-    termination: reencrypt
+    insecureEdgeTerminationPolicy: passthrough
+    termination: none
   to:
     kind: Service
     name: spring-petclinic
